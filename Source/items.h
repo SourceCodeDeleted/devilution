@@ -142,10 +142,11 @@ void SortSmith();
 void SpawnSmith(int lvl);
 BOOL PremiumItemOk(int i);
 int RndPremiumItem(int minlvl, int maxlvl);
-void SpawnOnePremium(int i, int plvl);
 #ifdef HELLFIRE
+void SpawnOnePremium(int i, int plvl, int myplr, bool noSpells);
 void SpawnPremium(int pnum);
 #else
+void SpawnOnePremium(int i, int plvl);
 void SpawnPremium(int lvl);
 #endif
 BOOL WitchItemOk(int i);
@@ -195,6 +196,6 @@ extern BYTE ItemAnimLs[];
 extern int ItemDropSnds[];
 extern int ItemInvSnds[];
 extern int idoppely;
-extern int premiumlvladd[6];
+extern int premiumlvladd[SMITH_PREMIUM_ITEMS];
 
 #endif /* __ITEMS_H__ */
